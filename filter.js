@@ -3,7 +3,9 @@
  * To run this file in Gitpod, use the 
  * command node filter.js in the terminal
  */
-
+//Uses a callback function
+//Must include a test
+//The filter() method always returns an Array, even it is an array of only one element
 
 // Simple Filtering
 const people = [
@@ -21,6 +23,13 @@ const people = [
   },
 ];
 
+const oldEnough = people.filter(person => person.age >= 21);
+console.log(oldEnough); //Should only log Michael and his age.
+
+const paul = people.filter(person => person.age >16 && person.age <= 18);
+const paul2 = people.filter(p => p.name === 'Paul')[0];
+console.log(paul);
+console.log(paul2);
 
 // Complex Filtering
 const students = [
@@ -55,3 +64,5 @@ const students = [
     ]
   },
 ];
+
+
